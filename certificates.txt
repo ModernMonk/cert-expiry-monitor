@@ -1,0 +1,10 @@
+google.com
+github.com
+expired.badssl.com
+example.com:8443
+stackoverflow.com
+microsoft.com
+amazon.com
+facebook.com
+twitter.com
+linkedin.com
