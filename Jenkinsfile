@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'WODC Jenkins Agent 17043' }
+    agent { label 'Jenkins Agent' }
 
     triggers {
         cron('H 8 * * *')
@@ -124,7 +124,7 @@ pipeline {
                         )
                         echo "✓ Email report sent successfully to: ${env.EMAIL_RECIPIENTS}"
                     } catch (Exception e) {
-                        echo "⚠ Failed to send email report: ${e.message}"
+                        echo "Failed to send email report: ${e.message}"
                         // Don't fail the build, just warn
                     }
                 }
@@ -165,7 +165,7 @@ pipeline {
             }
         }
         success {
-            echo "✓ SSL Certificate Expiry Monitor completed successfully"
+            echo "SSL Certificate Expiry Monitor completed successfully"
         }
     }
 }
